@@ -6,17 +6,17 @@ import org.springframework.stereotype.Component;
 @Component("thatSillyCoach")
 public class FotballCoach implements Coach {
 
+    //Field Injection example
+    @Autowired
     private  FortuneService fortuneService;
 
-    @Autowired
-    public FotballCoach(FortuneService theFortuneService) {
-        fortuneService = theFortuneService;
-
+    public FotballCoach() {
+        System.out.println(">> FotballCoach: inside default constructor");
     }
 
     @Override
     public String getDailyWorkout() {
-        return "Run 3 km";
+        return "Run 3 km :D ";
     }
 
     @Override
