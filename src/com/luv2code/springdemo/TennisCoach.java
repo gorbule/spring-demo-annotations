@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 public class TennisCoach implements Coach {
 
     @Autowired
-    @Qualifier("happyFortuneService")
+    @Qualifier("randomFortuneService")
     private FortuneService fortuneService;
 
     //constructor for Constructor Injection. Example available also for FootballCoach class
