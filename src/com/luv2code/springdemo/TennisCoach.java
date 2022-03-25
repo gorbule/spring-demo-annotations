@@ -3,10 +3,10 @@ package com.luv2code.springdemo;
 import org.springframework.stereotype.Component;
 
 /**
- * Annotation usage in Java
- * "thatSillyCoah" == bean id
+ * Annotation usage in Java:
+ * @Component("thatSillyCoach") == bean id
  */
-@Component("thatSillyCoach")
+@Component
 public class TennisCoach implements Coach {
 
     @Override
