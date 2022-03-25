@@ -30,6 +30,13 @@ public class TennisCoach implements Coach {
         this.fortuneService = fortuneService;
     }
 
+    //Method Injection
+    @Autowired
+    public void doSomeCrazyStuff(FortuneService fortuneService) {
+        System.out.println(">> TennisCoach: inside doSomeCrazyStuff");
+        this.fortuneService = fortuneService;
+    }
+
     @Override
     public String getDailyWorkout() {
         return "Practice your backhand volley";
