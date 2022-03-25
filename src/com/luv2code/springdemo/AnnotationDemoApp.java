@@ -20,6 +20,10 @@ public class AnnotationDemoApp {
         System.out.println(theCoach.getDailyWorkout());
         System.out.println(theCoach2.getDailyWorkout());
 
+        //call method to get the DailyFortune
+        System.out.println(theCoach.getDailyFortune());
+        System.out.println(theCoach2.getDailyFortune());
+
         //close container
         context.close();
 
