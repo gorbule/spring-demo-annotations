@@ -44,11 +44,13 @@ public class TennisCoach implements Coach {
 //    }
 
     //define my init method
+//    @PostConstruct
     public void doMyStartupStuff() {
         System.out.println(">> TennisCoach: inside of doMyStartupStuff");
     }
 
     //define my destroy method
+//    @PreDestroy
     public void doMyCleanupStuff() {
         System.out.println(">> TennisCoach: inside of doMyCleanupStuff");
     }
