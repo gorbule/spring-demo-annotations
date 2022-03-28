@@ -7,8 +7,11 @@ import org.springframework.stereotype.Component;
 /**
  * Annotation usage in Java:
  * @Component("thatSillyCoach") == bean id
+ * @Scope("prototype") - create a new instance every time
+ * Default Scope is SINGLETON
  */
 @Component("tennisCoach")
+//@Scope("prototype")
 public class TennisCoach implements Coach {
 
     @Autowired
@@ -40,6 +43,17 @@ public class TennisCoach implements Coach {
 //        this.fortuneService = fortuneService;
 //    }
 
+    //define my init method
+    public void doMyStartupStuff() {
+        System.out.println(">> TennisCoach: inside of doMyStartupStuff");
+    }
+
+    //define my destroy method
+    public void doMyCleanupStuff() {
+        System.out.println(">> TennisCoach: inside of doMyCleanupStuff");
+    }
+
+    //getters
     @Override
     public String getDailyWorkout() {
         return "Practice your backhand volley";
